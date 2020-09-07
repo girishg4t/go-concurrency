@@ -1,7 +1,10 @@
 package common
 
-var baseURL = "https://www1.nseindia.com/content/historical/EQUITIES/"
-var holidayList = []string{
+//BaseURL from where data need to be downloaded
+var BaseURL = "https://www1.nseindia.com/content/historical/EQUITIES/"
+
+//HolidayList of stock exchange
+var HolidayList = []string{
 	"2019-Aug-12",
 	"2019-Aug-15",
 	"2019-Sep-02",

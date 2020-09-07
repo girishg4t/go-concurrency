@@ -1,4 +1,4 @@
-module github.com/girishg4t/concurrency
+module concurrency
 
 go 1.13
 
