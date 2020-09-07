@@ -6,8 +6,8 @@ import (
 	"time"
 )
 
-//getDateRange between start and end date
-func getDateRange(start time.Time, end time.Time) []time.Time {
+//getDates between start and end date
+func getDates(start time.Time, end time.Time) []time.Time {
 	dates := []time.Time{}
 	for rd := utils.RangeDate(start, end); ; {
 		date := rd()

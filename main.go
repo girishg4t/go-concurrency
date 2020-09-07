@@ -5,14 +5,10 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 	"time"
-
-	//"bufio"
-	// manage multiple requests
-	"os" // os.Exit(1) on Error
-	// get an object type
 )
 
 var zipFileName string
@@ -20,17 +16,16 @@ var zipFileName string
 func main() {
 	//date := time.Now()
 	date := time.Date(2019, 8, 30, 0, 0, 0, 0, time.UTC)
-
-	zipFileName = date.Format("20060102150405")
-
 	start := date.AddDate(0, 0, 0)
 	end := date.AddDate(0, 0, 0)
 	fmt.Printf("Start Date : %s and End Date : %s\n",
 		start.Format("2006-Jan-02"), end.Format("2006-Jan-02"))
-	dates := getDateRange(start, end)
+	dates := getDates(start, end)
+
 	for _, dt := range dates {
 		url := getNSEURL(dt)
 		fmt.Printf("Got URL: %s \n", url)
+		zipFileName = date.Format("20060102150405")
 		startDownload(url)
 		fmt.Println("zip file downloaded")
 		z := readZipFile()
