@@ -21,46 +21,54 @@ func StopExecution() {
 
 func one(ctx context.Context) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
-				fmt.Println("one")
+			select {
+			case <-ctx.Done():
+				break
+			default:
+				fmt.Println("Started One")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			<-ctx.Done()
 		}
 	}()
 }
 
 func four(ctx context.Context) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
-				fmt.Println("four")
+			select {
+			case <-ctx.Done():
+				break
+			default:
+				fmt.Println("Started Four")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			<-ctx.Done()
 		}
 	}()
 }
 func two(ctx context.Context) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
-				fmt.Println("two")
+			select {
+			case <-ctx.Done():
+				break
+			default:
+				fmt.Println("Started Two")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			<-ctx.Done()
 		}
 	}()
 }
 func three(ctx context.Context) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
-				fmt.Println("three")
+			select {
+			case <-ctx.Done():
+				break
+			default:
+				fmt.Println("Started Three")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			<-ctx.Done()
 		}
 	}()
 }

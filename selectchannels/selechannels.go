@@ -21,46 +21,54 @@ func StopExecution() {
 
 func one(done chan bool) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
+			select {
+			case <-done:
+				break
+			default:
 				fmt.Println("Started One")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			isDone = <-done
 		}
 	}()
 }
 
 func four(done chan bool) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
+			select {
+			case <-done:
+				break
+			default:
 				fmt.Println("Started Four")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			isDone = <-done
 		}
 	}()
 }
 func two(done chan bool) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
+			select {
+			case <-done:
+				break
+			default:
 				fmt.Println("Started Two")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			isDone = <-done
 		}
 	}()
 }
 func three(done chan bool) {
 	go func() {
-		var isDone bool
 		for {
-			if !isDone {
+			select {
+			case <-done:
+				break
+			default:
 				fmt.Println("Started Three")
+				time.Sleep(time.Duration(1) * time.Second)
 			}
-			isDone = <-done
 		}
 	}()
 }

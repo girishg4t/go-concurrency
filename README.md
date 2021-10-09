@@ -46,10 +46,47 @@ $ go run main.go -program=3
 output:
 ```sh
 Started Four
+Started Two
+Started Three
+Started One
+Started Three
+Started One
+Started Two
+Started Four
+Started Four
+Started Two
+Started Three
+Started One
+Started One
+Started Four
+Started Three
+Started Two
+Started Two
+Started Four
+Started One
+Started Three
+Started Three
+Started One
+Started Two
+Started Four
+Started Two
+Started Four
+Started Three
+Started One
+Started Three
+Started Two
+Started Four
+Started One
+Started Four
 Started One
 Started Two
 Started Three
+Started One
+Started Two
+Started Three
+Started Four
 All done.
+Started Two
 ```
 
 4) To run Fourth program
@@ -58,10 +95,46 @@ $ go run main.go -program=4
 ```
 output:
 ```sh
-four
-one
-two
-three
+Started Four
+Started One
+Started Two
+Started Three
+Started One
+Started Three
+Started Four
+Started Two
+Started Two
+Started One
+Started Four
+Started Three
+Started Three
+Started One
+Started Four
+Started Two
+Started One
+Started Two
+Started Three
+Started Four
+Started Four
+Started Two
+Started One
+Started Three
+Started Two
+Started Four
+Started Three
+Started One
+Started One
+Started Three
+Started Four
+Started Two
+Started Four
+Started Two
+Started One
+Started Three
+Started Two
+Started Four
+Started One
+Started Three
 All done.
 ```
 
